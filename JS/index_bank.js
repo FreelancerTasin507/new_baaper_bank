@@ -32,6 +32,11 @@ document.getElementById("btn_withdraw").addEventListener("click", function () {
   const new_withdraw_field = parseFloat(new_withdraw_field_string);
   withdraw_field.value = "";
 
+  if (isNaN(new_deposit_field)) {
+    alert("Please Enter Only Numbers");
+    return;
+  }
+
   const previous_withdraw = document.getElementById("withdraw_total");
   const new_previous_withdraw_string = previous_withdraw.innerText;
   const new_previous_withdraw = parseFloat(new_previous_withdraw_string);
